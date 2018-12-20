@@ -1,0 +1,22 @@
+{
+  "name": "yatzy",
+  "version": "1.0.0",
+  "description": "Yahtzee score sheet with support for up to six players",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "yatzy",
+    "yahtzee",
+    "scorecard"
+  ],
+  "author": "Alexander Jarl",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4"
+  }
+}

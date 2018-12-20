@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,500');
+
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Permanent+Marker|Gloria+Hallelujah|Mountains+of+Christmas|Reenie+Beanie');
+
+body{
+  margin: 0px;
+  margin-top: 150px;
+  padding: 0px;
+  background-color: white;
+}
+*,*::before::after{
+  box-sizing: border-box;
+  margin: 0;
+}
+main{
+  margin-top: 0px;
+}
+section{
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;
+  margin:0px 50px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 4px 8px;
+  margin-bottom: 20px;
+  min-width: 240px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 7px 3px lightgrey;
+}
+header{
+  display: flex;
+  position: fixed;
+  padding:0px;
+  top:0px;
+  background-color: inherit;
+  width: 100%;
+  height: 110px;
+  background-color: white;
+  transition: height 150ms ease;
+  align-items: center;
+}
+
+header.sticky{
+  height:60px;
+  box-shadow: 2px 4px 7px 3px lightgrey;
+}
+nav{
+  margin: 0px 50px;
+  padding: 4px 8px;
+  border: 1px black;
+  width:100%;
+
+
+}
+
+header h1{
+  flex: 1;
+  position: fixed;
+  top: 5px;
+  left: 5%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 100px;
+  transition: font-size 150ms ease;
+  text-align: left;
+
+}
+
+header h1.sticky{
+  flex:1;
+  left:5%;
+  margin: 0;
+  padding: 0 auto;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 40px;
+  text-align: left;
+}
+/* icon */
+.playerFill1{
+  flex: 1;
+  padding-left: 0.5em;
+  text-align: center;
+  padding-top: 2px;
+  border-top: 1px black;
+  border-bottom: 1px black;
+  border-right: 1px black;
+  min-width: 72px;
+}
+/* diceval */
+.playerFill2{
+  flex: 1;
+  padding-left: 0.5em;
+  text-align: left;
+  border-left: 1px black;
+  border-top: 1px black;
+  border-bottom: 1px black;
+  min-width: 171px;
+}
+/* rule */
+.playerFill3{
+  flex: 2;
+  text-align: center;
+  font-size: 15px;
+  border: 1px black;
+}
+
+.playerHeader{
+  flex: 0.5;
+  text-align:center;
+  border-radius: 50%;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 24px;
+  min-width: 24px;
+  margin:0px 1px;
+  border: 3px solid black;
+
+
+}
+
+.navRow{
+  display: flex;
+  height: 40px;
+  background-color: white;
+  align-items:center;
+  justify-content: center;
+  border: 1px red;
+  margin: 2px;
+}
+
+
+.row{
+  display: flex;
+  height: 40px;
+  background-color: white;
+  align-items: stretch center;
+  justify-content: center;
+  border: 1px solid black;
+  margin: 2px;
+}
+
+
+.titleRow{
+  display: flex;
+  height: 40px;
+  background-color: white;
+  align-items: stretch center;
+  justify-content: center;
+  border: 1px solid black;
+  margin: 2px;
+}
+
+.titleRowLabel{
+  flex: 1;
+  padding-left: 0.5em;
+  text-align: left;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  min-width: 171px;
+}
+
+.upperSection{
+  flex:4;
+  padding-left: 0.5em;
+  min-width: 100px;
+  border-radius: 5px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modalHeader h2{
+  font-family: 'Gloria Hallelujah', cursive;
+}
+.modalContent{
+  justify-items: center;
+  background-color: #f4f4f4;
+  border-radius: 15px;
+  margin: 25% auto;
+  padding: 20px;
+  width: 40%;
+  box-shadow: 2px 4px 9px 3px rgba(0,0,0,0.4);
+}
+.modalBody{
+  display:flex;
+  justify-content: space-around;
+
+}
+
+.diceImage{
+max-width: 15%;
+height: auto;
+margin:10px auto;
+padding-right: 0;
+align-self: center;
+border-radius: 21px;
+ border: none;
+ color: white;
+
+ text-align: center;
+ font-size: 16px;
+ cursor: pointer;
+}
+.diceImage0:hover{
+  background-color: rgba(255, 0, 0, 0.3);
+}
+.diceImage1:hover{
+  background-color: rgba(255, 148, 0, 0.3);
+}
+.diceImage2:hover{
+  background-color: rgba(255, 255, 0, 0.3);
+}
+.diceImage3:hover{
+  background-color: rgba(0, 255, 0, 0.3);
+}
+.diceImage4:hover{
+  background: linear-gradient(to bottom right, #33ccff 0%, #66ff99 25%, #ff9933 50%, #ff66cc 75%, #ff99cc 100%);
+}
+
+.close{
+  color: darkgrey;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus{
+  cursor:pointer;
+  text-decoration: none;
+  color: black;
+}
+
+
+@media(max-width:480px){
+  section{
+    margin: 0px 0px 20px;
+  }
+  .icon{
+    min-width: 50px;
+    padding-left: 0;
+  }
+  .playerFill1{
+    margin:0px;
+  }
+  nav{
+    margin:0px 0px 0px;
+  }
+  .scoreBox{
+    margin:0;
+    min-width: 0px;
+  }
+  .modalContent{
+    padding: 10px;
+    width: 90%;
+  }
+}
+@media(max-width:1270px){
+  .rule{
+    display: none;
+
+  }
+  header h1{
+    font-size: 50px;
+  }
+  .playerFill3{
+    display: none;
+  }
+  body{
+    margin-top: 110px;
+  }
+  .modalContent{
+    padding: 10px;
+    width: 60%;
+  }
+}
+@media(max-width:720px) {
+  .diceval{
+    display: none;
+  }
+  .playerFill2{
+    display: none;
+  }
+  header h1.sticky{
+    font-size: 20px;
+  }
+  header h1{
+    font-size: 30px;
+  }
+  .playerHeader{
+    padding-top: 25px;
+    border: none;
+  }
+  .modalImage0,.modalImage1,.modalImage2,.modalImage3,.modalImage4{
+    border-radius: 2px;
+  }
+
+
+}
+.icon{
+  display: flex;
+  flex: 1;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  min-width: 72px;
+
+}
+.rule{
+  flex: 2;
+text-align: center;
+font-size: 15px;
+border: 1px solid black;
+
+}
+
+#lowerHalfResult{
+  margin-bottom: 50px;
+}
+
+.diceval{
+  flex: 1;
+  padding-left: 0.5em;
+  text-align: left;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  min-width: 171px;
+
+}
+
+.scoreBox, .resultbox{
+  flex: 0.5;
+  text-align: center;
+  font-family: 'Reenie Beanie', cursive;
+  font-size:1.5em;
+  color: dimgray;
+  border: 1px solid dimgray;
+  min-width: 24px;
+  margin: 0px 1px;
+}
+.scoreBox:hover{
+  background-color: lightgrey;
+  cursor: pointer;
+}
+.resultbox:hover{
+  cursor:default;
+}
+
+#testSubmit{
+  display: none;
+}
+
+.popupButton{
+  background-color: #fff;
+ border: 4px solid black;
+ border-radius: 18px;
+ width: 100%;
+ color: black;
+ padding: 15px 25px;
+ margin: 20px auto;
+ text-align: center;
+ font-size: 24px;
+ font-weight: 800;
+ font-family: 'Gloria Hallelujah', cursive;
+ cursor: pointer;
+}
+
+.popupButton:hover {
+ background-color: red;
+}
+
+.scoreButton, .okButton{
+  background-color: #fff;
+ border: 4px solid black;
+ border-radius: 18px;
+ Width: 100%;
+ color: black;
+ padding: 15px 25px;
+ margin: 20px 0;
+ text-align: center;
+ font-size: 32px;
+ font-weight: 800;
+ font-family: 'Gloria Hallelujah', cursive;
+ cursor: pointer;
+}
+
+.btnInactive{
+  background-color: #777;
+  cursor: not-allowed;
+}
+.btnActive:hover{
+  background-color: green;
+}
+
+.btnInactive:hover{
+  background-color: #444;
+}
+ .scoreButton:hover {
+ background-color: green;
+}
+
+.yatzyButton{
+  background-color: #fff;
+ border: 4px solid black;
+ border-radius: 18px;
+ Width: 100%;
+ color: black;
+ padding: 15px 25px;
+ margin: 20px 0;
+ text-align: center;
+ font-size: 32px;
+ font-weight: 1600;
+ font-family: 'Gloria Hallelujah', cursive;
+ cursor: pointer;
+}
+
+.yatzyButton:hover {
+ background: linear-gradient(to bottom right, #33ccff 0%, #66ff99 25%, #ff9933 50%, #ff66cc 75%, #ff99cc 100%);
+}
+
+.diceHighlight{
+  transform: translateY(-8px);
+  box-shadow: 2px 4px 9px 3px rgba(0,0,0,0.4);
+  transition: 50ms ease;
+}

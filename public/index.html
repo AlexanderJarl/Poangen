@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <title>Yatzy</title>
+      <link rel= "stylesheet" type="text/css" href="/CSS/style.css">
+      <script type="text/javascript" src="/JS/yatzyscript.js"></script>
+
+  </head>
+  <header>
+    <h1 onclick="generatePlayingField(nbrOfPlayers, playernames, 0)">YATZY</h1>
+    <nav id="players">
+      <div class="navRow">
+        <div class="playerFill1"></div>
+        <div class="playerFill2"></div>
+        <div class="playerFill3"></div>
+      </div>
+    </nav>
+
+  </header>
+  <body>
+    <main>
+      <form class="scoresheet" action="index.html" method="post">
+
+        <input type="submit" id="testSubmit" name="submit">
+      </form>
+       <section id="topHalf">
+          <div class="titleRow">
+            <div class="titleRowLabel">
+              Upper section
+            </div>
+            <div class="icon">
+              <!--  <img class="diceimg" src="./images/ones.png" alt="1:or" style = "width:32px;height:32px;">-->
+             </div>
+          </div>
+          <div class="row">
+            <div class="diceval">Ones</div>
+            <div class="icon">
+                <img class="diceimg" src="./images/ones.png" alt="1:or" style = "width:32px;height:32px;">
+            </div>
+            <div class="rule">Count and Add only Aces</div>
+          </div>
+          <div class="row">
+            <div class="diceval">Twos</div>
+            <div class="icon">
+                <img class="diceimg" src="./images/twos.png" alt="1:or" style = "width:32px;height:32px;">
+            </div>
+            <div class="rule">Count and Add only os</div>
+          </div>
+          <div class="row">
+            <div class="diceval">Threes</div>
+            <div class="icon">
+                <img class="diceimg" src="./images/threes.png" alt="1:or" style = "width:32px;height:32px;">
+            </div>
+            <div class="rule">Count and Add only Threes</div>
+          </div>
+          <div class="row">
+            <div class="diceval">Fours</div>
+            <div class="icon">
+                <img class="diceimg" src="./images/fours.png" alt="4:or" style = "width:32px;height:32px;">
+            </div>
+            <div class="rule">Count and Add only Fours</div>
+          </div>
+          <div class="row">
+            <div class="diceval">Fives</div>
+            <div class="icon">
+                <img class="diceimg" src="./images/fives.png" alt="5:or" style = "width:32px;height:32px;">
+            </div>
+            <div class="rule">Count and Add only Fives</div>
+          </div>
+          <div class="row">
+            <div class="diceval">Sixes</div>
+            <div class="icon">
+                <img class="diceimg" src="./images/sixes.png" alt="6:or" style = "width:32px;height:32px;">
+            </div>
+            <div class="rule">Count and Add only Sixes</div>
+          </div>
+
+        </section>
+
+        <section id="topHalfResult">
+        <div class="row">
+          <div class="diceval">Score</div>
+          <div class="icon"></div>
+          <div class="rule">Result of top half</div>
+        </div>
+        <div class="row">
+          <div class="diceval">Bonus</div>
+          <div class="icon"></div>
+          <div class="rule">Must score 63 or above for bonus</div>
+        </div>
+
+        </section>
+
+        <section id="lowerHalf">
+        <div class="titleRow">  <div class="titleRowLabel">Lower Section</div></div>
+
+          <div class="row">
+            <div class="diceval">Pair</div>
+            <div class="icon"></div>
+            <div class="rule">One pair</div>
+          </div>
+          <div class="row">
+            <div class="diceval">Two pairs</div>
+            <div class="icon"></div>
+            <div class="rule">Two pairs</div>
+          </div>
+          <div class="row">
+            <div class="diceval">Three of a kind</div>
+            <div class="icon"></div>
+            <div class="rule">Three of a kind</div>
+          </div>
+          <div class="row">
+            <div class="diceval">Four of a kind</div>
+            <div class="icon"></div>
+            <div class="rule">Four of a kind</div>
+          </div>
+          <div class="row">
+            <div class="diceval">Small straight</div>
+            <div class="icon"></div>
+            <div class="rule">One to Five</div>
+          </div>
+          <div class="row">
+            <div class="diceval">Big straight</div>
+            <div class="icon"></div>
+            <div class="rule">Two to Six</div>
+          </div>
+          <div class="row">
+            <div class="diceval">Full House</div>
+            <div class="icon"></div>
+            <div class="rule">Pair and Three of a kind</div>
+          </div>
+          <div class="row">
+            <div class="diceval">Chance</div>
+            <div class="icon"></div>
+            <div class="rule">Add all the dice together</div>
+          </div>
+          <div class="row">
+            <div class="diceval">Yatzy!</div>
+            <div class="icon"></div>
+            <div class="rule">Five of a kind</div>
+          </div>
+        </section>
+        <section id="lowerHalfResult">
+          <div class="row">
+            <div class="diceval">Total score</div>
+            <div class="icon"><img class="diceimg" src="./images/result.png" alt="1:or" style = "width:32px;height:32px;"></div>
+            <div class="rule"></div>
+
+          </div>
+        </section>
+
+        <div class="modal" id="resultModal">
+          <div class="modalContent" id="resModalmain">
+            <div class="modalHeader">
+                <span class="close" id="closeBtn">&times;</span>
+                <h2 id="modalTitle">How many did you score?</h2>
+            </div>
+            <div class="modalBody" id="resModalContent">
+
+            </div>
+           <div class="modalOk" id="modalOkArea">
+
+            </div>
+            <div class="modalScratch" id="modalScratchArea">
+
+            </div>
+
+          </div>
+
+        </div>
+    </main>
+    <script type="text/javascript" src="/JS/yatzymodal.js"></script>
+    <script type="text/javascript" src="/JS/yatzyrules.js"></script>
+    <script type="text/javascript" src="/JS/svg.js"></script>
+    <script type="text/javascript" src="/JS/yatzyRuleinfo.js"></script>
+    <script type="text/javascript" src="/JS/generatePlayingField.js"></script>
+  </body>
+  <footer>
+  </footer>
+</html>
